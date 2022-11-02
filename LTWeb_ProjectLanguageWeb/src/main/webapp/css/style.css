@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/* base */
+a {
+    text-decoration: none;
+    color: #000;
+}
+body{
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+.position-r{
+    position: relative;
+}
+.col-2{
+    flex: 0 0 auto;
+    width: 20%;
+}
+
+.col-4{
+    flex: 0 0 auto;
+    width: 40%;
+}
+p{
+    margin: 0;
+}
+/* base end */
+
+/* menu */
+.menu{
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 68px;
+    position: fixed;
+    top: 0;
+    box-shadow: -10px -10px 10px rgba(94, 93, 93, 0.2), 6px 6px 10px rgba(84, 84, 84, 0.2);
+}
+.menu-logo{
+    position: absolute;
+    width: 70%;
+    left: 8%;
+    top: 20%;
+
+}
+.menu-logo a{
+    font-size: 34px;
+    color: red;
+    font-weight: 700;
+    font-family:cursive;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    z-index: 2;
+}
+.col-3{
+    width: 25%;
+    flex: 0 0 auto;
+}
+
+.col-6{
+    width: 50%;
+    flex: 0 0 auto;
+}
+
+.width-100{
+    width: 100% !important;
+}
+
+.menu-list{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.menu-item{
+    text-align: center;
+    height: 68px;
+    position: relative;
+}
+.menu-item-box{
+    bottom: 5px;
+    margin: 4px 0;
+}
+.menu-item-box img {
+    height: 30px;
+    vertical-align: middle;
+}
+
+.menu-item-box p {
+    margin: 7px 0 0 0;
+    font-family: Quicksand,sans-serif;
+}
+
+
+/* user */
+.menu-user-name{
+    font-size: 20px;
+    color: rgb(228, 194, 0);
+}
+
+.cushion{
+    width: 100%;
+    height: 68px;
+}
+/* user end */
+/* menu end */
+
+
+/* content */
+.content{
+    
+}
+
+.bgr_f2{
+    background-color: #f2f2f2;
+}
+.course-title{
+      margin: 30px 0;
+      display: flex;
+      align-items: center;  
+      justify-content: center;
+
+}
+.course-title-header{
+    width: 60%;
+    height: 50px;
+    background-color: aqua;
+    text-align: center;
+    border-radius: 20px;
+}
+.course-title-header p {
+    line-height: 50px;
+    font-weight: 700;
+    font-size: 26px;
+    font-style: normal;
+    font-family:sans-serif;
+}
+.packet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#list-word{
+    width: 80%;
+}
+.word-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    width: 75%;
+    border-bottom: 1px solid #333;
+}
+
+.col_2_content{
+    min-height: 671px;
+}
+/* content end */

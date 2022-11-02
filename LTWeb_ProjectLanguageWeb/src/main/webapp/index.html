@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <!-- <link rel="stylesheet" href="./css/main.css"> -->
+	<script src="./js/include.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="content_data">
+        <?php
+            include('admincp/config/config.php');
+        ?>
+        <!--  <div include-html="index22.html"></div> -->
+        <div class="menu">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3 col_1 position-r">
+                        <div class="menu-logo">
+                            <a href="">
+                                <!-- <img class="width-100" src="./images/Logo_mochi-01.png" alt="logo"> -->
+                              Learn Language
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col_2">
+                        <div class="menu-list">
+                            <div class="col-3 menu-item">
+                                <a href="index.php?menu=dictionary&query=main">
+                                    <div class="menu-item-box">
+                                        <img src="./images/book.png" alt="book">
+                                        <p>Từ điển</p>
+                                    </div>
+
+                                </a></div>
+                            <div class="col-3 menu-item">
+                                <a href="index.php?menu=lesson&query=lessonlist">
+                                    <div class="menu-item-box">
+                                        <img src="./images/book.png" alt="book">
+                                        <p>Học tập</p>
+                                    </div>
+                                </a></div>
+                            <div class="col-3 menu-item">
+                                <a href="">
+                                    <div class="menu-item-box">
+                                        <img src="./images/book.png" alt="book">
+                                        <p>Hoc tap</p>
+                                    </div>
+                                </a></div>
+                            <div class="col-3 menu-item">
+                                <a href="">
+                                    <div class="menu-item-box">
+                                        <img src="./images/book.png" alt="book">
+                                        <p>Hoc tap</p>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+
+                    <div class="col-3 col_3">
+                        <div class="menu-user-name">Tài khoản: Minh Trong</div>
+                        <div class="menu-user-avatar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cushion"></div>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3 col_1_content bgr_f2">
+                        <?php
+                                    if(isset($_GET['menu'])){
+                                        $temp = $_GET['menu'];
+                                    }else{
+                                        $temp ='';
+                                    }   
+                                    if($temp == 'dictionary'){
+                                        include("pages/menu/dictionary.php");
+                                    }else {
+                                        include("pages/menu/menu.php");
+                                    }
+
+                        ?>
+                        <div include-html="index22.html"></div>
+                    </div>
+                    <div class="col-6 col_2_content">
+                        <?php
+                                    if(isset($_GET['menu']) && $_GET['query']){
+                                        $temp = $_GET['menu'];
+                                        $query = $_GET['query'];
+                                    }else{
+                                        $temp ='';
+                                        $query = '';
+                                    }   
+                                    if($temp == 'dictionary' && $query =='dic'){
+                                        include("pages/main/dictionarymain.php");
+                                    }if($temp == 'lesson' && $query == 'lessonlist'){
+                                        include("pages/main/lessonmain.php");
+                                    }if($temp == 'lesson' && $query == 'lessongame'){
+                                        header("Location:pages/lesson/lesson1.php");
+                                        // include("pages/lesson/lesson1.php");
+                                    }else if($temp == 'dictionary' && $query =='main'){
+                                        include("pages/main/main.php");
+                                    }
+                        ?>
+                    </div>
+                    <div class="col-3 col_3_content bgr_f2">
+                    <?php
+                                    if(isset($_GET['menu'])){
+                                        $temp = $_GET['menu'];
+                                    }else{
+                                        $temp ='';
+                                    }   
+                                    if($temp == 'dictionary'){
+                                        include("pages/menu/right.php");
+                                    }else {
+                                        include("pages/menu/right.php");
+                                    }
+                        ?>             
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+		includeHTML();
+	</script>
+</body>
+</html>
